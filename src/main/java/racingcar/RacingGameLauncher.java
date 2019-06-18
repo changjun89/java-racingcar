@@ -10,11 +10,12 @@ public class RacingGameLauncher {
     Record record = new Record();
 
     InputView.askNameOfCars();
-    int numberOfCar = scanner.nextInt();
+    String inputCarNames = scanner.next();
+    String[] carNames = Parser.carNameParse(inputCarNames);
     InputView.askNumberOfTimes();
     int numberOfTimes = scanner.nextInt();
 
-    RacingGame racingGame = new RacingGame(numberOfCar);
+    RacingGame racingGame = new RacingGame(carNames);
     racingGame.start(numberOfTimes, record);
 
     ResultView.display(record);
