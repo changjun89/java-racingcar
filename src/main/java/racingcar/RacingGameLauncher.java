@@ -9,7 +9,7 @@ public class RacingGameLauncher {
   public static void start() {
     Record record = new Record();
 
-    InputView.askNumberOfCar();
+    InputView.askNameOfCars();
     int numberOfCar = scanner.nextInt();
     InputView.askNumberOfTimes();
     int numberOfTimes = scanner.nextInt();
